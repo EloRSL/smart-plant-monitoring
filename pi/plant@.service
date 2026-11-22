@@ -1,0 +1,22 @@
+# Starts service.py at every boot, with the version after the "@" (0, 1, 2 or 3):
+#
+#   sudo cp plant@.service /etc/systemd/system/
+#   sudo systemctl enable plant@2       from the next boot on, run V2
+#   sudo systemctl disable plant@2      stop that (same number)
+#
+# No After= line on purpose: the service starts as early as possible, so the ESP gets its first
+# ready sooner.
+#
+# From V1 on the service powers the Pi off after bye with "sudo -n poweroff", which needs the
+# sudoers line from the README setup (there is no terminal here to type a password into).
+
+[Unit]
+Description=Plant monitor Pi side, V%i
+
+[Service]
+User=admin
+WorkingDirectory=/home/admin/PEON/pi
+ExecStart=/home/admin/PEON/pi/.venv/bin/python /home/admin/PEON/pi/service.py %i
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+# these files run on the Pi: keep Linux line endings even in a clone made on Windows (systemd chokes on CRLF)
+* text=auto eol=lf

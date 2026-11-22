@@ -1,0 +1,4 @@
+# made on the Pi, not code: the installed packages and what the programs write (logs, last photo)
+.venv/
+data/
+__pycache__/

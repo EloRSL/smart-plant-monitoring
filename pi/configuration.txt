@@ -1,0 +1,6 @@
+3: soil_humidity < 350
+2: air_temperature > 25
+2: air_temperature < 8
+1: soil_humidity > 900
+4: yellow_percent > 30
+4: unhealthy_percent > 50

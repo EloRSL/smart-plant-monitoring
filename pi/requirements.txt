@@ -1,0 +1,6 @@
+# The leafs-starter lab environment (NumPy, ONNX Runtime, OpenCV) plus two additions.
+# Install as in the labs, inside the venv:
+#   python -m pip install --only-binary=:all: -r requirements.txt
+-r ../leafs-starter/requirements.txt
+Pillow==10.4.0   # image preprocessing of the leafs-advanced lab
+pyserial==3.5    # UART lab; the apt package python3-serial is not visible inside a venv
