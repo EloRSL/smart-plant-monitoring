@@ -1,0 +1,4 @@
+# V2/V3 build settings: CPU at 80 MHz, application and bootloader log at Warning.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80=y
+CONFIG_LOG_DEFAULT_LEVEL_WARN=y
+CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
